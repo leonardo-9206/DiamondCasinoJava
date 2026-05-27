@@ -1,15 +1,16 @@
 package models;
 
+// Aplicando Herencia: Cliente "es un" Usuario
 public class Cliente extends Usuario {
-    //constructor
+
     public Cliente(String idUsuario, String nombre, String password) {
-        //llamamos al constructor del padre y fijamos su rol como cliente
+        // Llama al constructor de la clase padre (Usuario) y fuerza el rol "Cliente"
         super(idUsuario, nombre, password, "Cliente");
     }
 
-    //muestra en terminal sus permisos
+    // Aplicando Polimorfismo: Sobrescribe el método abstracto
     @Override
     public String obtenerNivelAcceso() {
-        return "Acceso de Cliente: Solo puede ver su historial de compras y su cuenta personal.";
+        return "[NIVEL 3] Acceso de Cliente: Solo puede ver su historial de compras y su cuenta personal.";
     }
 }

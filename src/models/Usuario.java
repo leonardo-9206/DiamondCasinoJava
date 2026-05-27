@@ -1,13 +1,14 @@
 package models;
 
+// Hacemos la clase abstracta para cumplir con el requisito de Herencia y Polimorfismo
 public abstract class Usuario {
-    //protected para que se puedan heredar los atributos
+    
+    // Protected permite que las clases hijas (Admin, Empleado) hereden estas variables
     protected String idUsuario;
     protected String nombre;
     protected String password;
     protected String rol;
 
-    //constructor
     public Usuario(String idUsuario, String nombre, String password, String rol) {
         this.idUsuario = idUsuario;
         this.nombre = nombre;
@@ -15,31 +16,21 @@ public abstract class Usuario {
         this.rol = rol;
     }
 
-    //setters y getters
-    public String getIdUsuario(){
-        return idUsuario; }
-
-    public void setIdUsuario(String idUsuario){
-        this.idUsuario = idUsuario; }
+    public String getIdUsuario() { return idUsuario; }
+    public void setIdUsuario(String idUsuario) { this.idUsuario = idUsuario; }
     
-    public String getNombre(){
-        return nombre;}
-
-    public void setNombre(String nombre){
-        this.nombre = nombre;}
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
     
-    public String getPassword(){
-        return password;}
-
-    public void setPassword(String password){
-        this.password = password;}
+    public String getPassword() { return password; }
+    public void setPassword(String password) { this.password = password; }
     
-    public String getRol(){
-        return rol; }
+    public String getRol() { return rol; }
+    public void setRol(String rol) { this.rol = rol; }
 
-    public void setRol(String rol){
-        this.rol = rol; }
-
-    //para imprimir permisos en terminal
+    // ==========================================
+    // REQUISITO CUMPLIDO: POLIMORFISMO
+    // ==========================================
+    // Este método obliga a todas las clases hijas a tener su propia versión de los permisos
     public abstract String obtenerNivelAcceso();
 }

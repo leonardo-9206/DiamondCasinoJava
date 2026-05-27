@@ -1,23 +1,27 @@
 package models;
+
 import java.util.ArrayList;
 
 public class CuentaCliente {
+    
     private String idCuenta;
     private String nombreCliente;
-    private ArrayList<Venta> historialVentas; //se guardan las ventas para el cliente
+    
+    // En lugar del viejo arreglo de punteros ventas[100], usamos un ArrayList
+    private ArrayList<Venta> historialVentas;
 
-    //constructor
     public CuentaCliente(String idCuenta, String nombreCliente) {
         this.idCuenta = idCuenta;
         this.nombreCliente = nombreCliente;
         this.historialVentas = new ArrayList<>();
     }
 
-    //agregar una venta al historial
+    // Agregar una venta al historial del cliente
     public void agregarVenta(Venta nuevaVenta) {
         historialVentas.add(nuevaVenta);
     }
 
+    // Calcular el total histórico gastado por este cliente
     public double calcularTotalGastado() {
         double totalGlobal = 0;
         for (Venta v : historialVentas) {
@@ -26,24 +30,24 @@ public class CuentaCliente {
         return totalGlobal;
     }
 
-    //setters y getters
+    // Getters y Setters
     public String getIdCuenta() {
         return idCuenta;
     }
 
-    public void setIdCuenta(String idCuenta){
+    public void setIdCuenta(String idCuenta) {
         this.idCuenta = idCuenta;
     }
 
-    public String getNombreCliente(){
+    public String getNombreCliente() {
         return nombreCliente;
     }
 
-    public void setNombreCliente(String nombreCliente){
+    public void setNombreCliente(String nombreCliente) {
         this.nombreCliente = nombreCliente;
     }
 
-    public ArrayList<Venta> getHistorialVentas(){
+    public ArrayList<Venta> getHistorialVentas() {
         return historialVentas;
     }
 }
