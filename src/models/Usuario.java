@@ -1,13 +1,11 @@
 package models;
 
 public abstract class Usuario {
-    //protected para que se puedan heredar los atributos
     protected String idUsuario;
     protected String nombre;
     protected String password;
     protected String rol;
 
-    //constructor
     public Usuario(String idUsuario, String nombre, String password, String rol) {
         this.idUsuario = idUsuario;
         this.nombre = nombre;
@@ -15,7 +13,6 @@ public abstract class Usuario {
         this.rol = rol;
     }
 
-    //setters y getters
     public String getIdUsuario(){
         return idUsuario; }
 
@@ -40,6 +37,5 @@ public abstract class Usuario {
     public void setRol(String rol){
         this.rol = rol; }
 
-    //para imprimir permisos en terminal
     public abstract String obtenerNivelAcceso();
 }

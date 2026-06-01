@@ -4,16 +4,14 @@ import java.util.ArrayList;
 public class CuentaCliente {
     private String idCuenta;
     private String nombreCliente;
-    private ArrayList<Venta> historialVentas; //se guardan las ventas para el cliente
+    private ArrayList<Venta> historialVentas;
 
-    //constructor
     public CuentaCliente(String idCuenta, String nombreCliente) {
         this.idCuenta = idCuenta;
         this.nombreCliente = nombreCliente;
         this.historialVentas = new ArrayList<>();
     }
 
-    //agregar una venta al historial
     public void agregarVenta(Venta nuevaVenta) {
         historialVentas.add(nuevaVenta);
     }
@@ -26,7 +24,6 @@ public class CuentaCliente {
         return totalGlobal;
     }
 
-    //setters y getters
     public String getIdCuenta() {
         return idCuenta;
     }

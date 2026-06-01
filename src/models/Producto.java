@@ -1,23 +1,21 @@
 package models;
-import java.io.Serializable; //para guardar en binarios sin tener que estar guardando campo por campo y en el mismo orden siempre
+import java.io.Serializable;
 
 public class Producto implements Serializable {
-    //para evitar invalidclassexception
     private static final long serialVersionUID = 1L;
     
     private String id;
     private String nombre;
     private double precio;
-    private int cantidad; //stock actual
+    private int cantidad;
     private int stockMin;
     private int stockMax;
-    private String tipo; //"Fichas", "Bebidas", "Snacks"
-    private boolean activo; //para bajas logicas
+    private String tipo;
+    private boolean activo;
 
     public Producto() {
     }
 
-    //constructor
     public Producto(String id, String nombre, double precio, int cantidad, int stockMin, int stockMax, String tipo, boolean activo) {
         this.id = id;
         this.nombre = nombre;
@@ -29,7 +27,6 @@ public class Producto implements Serializable {
         this.activo = activo;
     }
 
-    //setters y getters
     public String getId(){
         return id;}
 
@@ -78,7 +75,6 @@ public class Producto implements Serializable {
     public void setActivo(boolean activo){
         this.activo = activo;}
 
-    //retorna toda la info del producto en un solo string ya con formato chido
     @Override
     public String toString() {
         String estado;
