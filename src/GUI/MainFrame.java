@@ -265,7 +265,14 @@ public class MainFrame extends JFrame {
 		});
 		
 		
+		
 	}//mainframe usuario usuario
+	
+	public void actualizarFecha() {
+		if(lblFecha != null) {
+			lblFecha.setText("Fecha: " + managers.FechaManager.getFechaActual());
+		}
+	}
 	
 }//mainframe extends
 		
