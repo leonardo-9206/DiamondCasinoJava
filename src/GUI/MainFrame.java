@@ -20,8 +20,8 @@ public class MainFrame extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private Usuario usuarioLogueado;
-	JPanel panelCentral;
-	JLabel lblFecha;
+	private JPanel panelCentral;
+	private JLabel lblFecha;
 	
 	public MainFrame() {
 		this(null);
@@ -191,37 +191,78 @@ public class MainFrame extends JFrame {
 		panelMenu.add(btnCerrarSesion);
 		
 		//AQUI VA LO DE VISTAS Y ROLES
+		if(usuarioLogueado != null) {
+			if(usuarioLogueado.getRol().equals("Empleado")) {
+				btnUsuarios.setVisible(false); //solo el admin puede ver lo de usuarios
+			}else if(usuarioLogueado.getRol().equals("Cliente")) {
+				btnPuntoVenta.setVisible(false);
+				btnInventario.setVisible(false);
+				btnUsuarios.setVisible(false);
+				btnReportes.setVisible(false);
+				btnHistorial.setVisible(true); //este es el unico que puede ver, junto con el de cerrar sesion
+			}
+		}
 		
+		//Area de trabajo principal
+		panelCentral = new JPanel();
+		panelCentral.setBackground(new Color(20,25,40));
+		panelCentral.setBounds(250,0,800,720);
+		panelCentral.setLayout(null);
+		contentPane.add(panelCentral);
 		
 		//ACCIONES DE BOTONES
-		
+		//VENTA
 		btnPuntoVenta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				panelCentral.removeAll(); //limpia lo que esta ahi porque va a cambiar de vista
+				PanelVentas vistaVentas = new PanelVentas();
+				panelCentral.add(vistaVentas);
+				panelCentral.revalidate();
+				panelCentral.repaint();
 			}
 		});
 		
-		
+		//INVENTARIO
 		btnInventario.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				panelCentral.removeAll(); //limpia lo que esta ahi porque va a cambiar de vista
+				PanelInventario vistaInventario = new PanelInventario();
+				panelCentral.add(vistaInventario);
+				panelCentral.revalidate();
+				panelCentral.repaint();
 			}
 		});
 		
+		//REPORTES
 		btnReportes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				panelCentral.removeAll(); //limpia lo que esta ahi porque va a cambiar de vista
+				PanelReportes vistaReportes = new PanelReportes();
+				panelCentral.add(vistaReportes);
+				panelCentral.revalidate();
+				panelCentral.repaint();
 			}
 		});
 		
+		//HISTORIAL
+		btnHistorial.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				panelCentral.removeAll(); //limpia lo que esta ahi porque va a cambiar de vista
+				PanelHistorial vistaHistorial = new PanelHistorial();
+				panelCentral.add(vistaHistorial);
+				panelCentral.revalidate();
+				panelCentral.repaint();
+			}
+		});
+		
+		//CERRAR SESION
 		btnCerrarSesion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				dispose(); //cierra el menu
+				Login login = new Login();
+				login.setVisible(true); //vuelve a la pantalla del login
 			}
 		});
-		
-
-		panelCentral.setBounds(281, 10, 441, 552);
-		contentPane.add(panelCentral);
-
-		
-		
 		
 		
 	}//mainframe usuario usuario
