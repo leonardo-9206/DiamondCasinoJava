@@ -77,7 +77,7 @@ public class PanelHistorial extends JPanel {
 				sb.append(String.format("   - %-20s x%-5d  $%.2f\n",
 						d.getProducto().getNombre(), d.getCantidad(), d.getSubtotal()));
 			}
-			sb.append(String.format("    TOTAL PAGADO: $%.2f\n", v.getTotal()));
+			sb.append(String.format("    TOTAL PAGADO: $%.2f\n", v.getTotal()));	
 			sb.append("-------------------------------------------------\n");
 		}
 		sb.append(String.format("\nGRAN TOTAL HISTORICO GASTADO: $%.2f\n", cuenta.calcularTotalGastado()));

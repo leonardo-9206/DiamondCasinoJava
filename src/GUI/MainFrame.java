@@ -248,7 +248,7 @@ public class MainFrame extends JFrame {
 		btnHistorial.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panelCentral.removeAll(); //limpia lo que esta ahi porque va a cambiar de vista
-				PanelHistorial vistaHistorial = new PanelHistorial();
+				PanelHistorial vistaHistorial = new PanelHistorial(usuarioLogueado);
 				panelCentral.add(vistaHistorial);
 				panelCentral.revalidate();
 				panelCentral.repaint();
