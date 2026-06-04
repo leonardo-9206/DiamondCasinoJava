@@ -15,6 +15,14 @@ public class Venta {
         this.detalles = new ArrayList<>();
         this.total = 0.0;
     }
+    
+    public Venta(String idCliente, String fecha) {
+    	this.idVenta = "V-" + System.currentTimeMillis();
+    	this.idCliente = idCliente;
+    	this.fecha = fecha;
+    	this.detalles = new ArrayList<>();
+    	this.total = 0.0;
+    }
 
     public void agregarDetalle(Producto producto, int cantidad) {
         DetalleVenta nuevoDetalle = new DetalleVenta(producto, cantidad);
