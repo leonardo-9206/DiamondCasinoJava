@@ -25,7 +25,7 @@ import models.Venta;
 
 
 
-public class PanelVentas extends JFrame {
+public class PanelVentas extends JPanel {
 	private static final long serialVersionUID = 1L;
 	private VentasManager ventasManager;
 	private InventarioManager invManager;
@@ -112,7 +112,7 @@ public class PanelVentas extends JFrame {
 					String inputNombreProd = solicitarInput("Nombre del producto a comprar (o escribe FIN para terminar)");
 					if(inputNombreProd == null || inputNombreProd.equalsIgnoreCase("FIN")) {
 						seguir = false;
-						return;
+						continue;
 					}
 					Producto p = invManager.buscarProductoPorNombre(inputNombreProd);
 					if(p == null) {
