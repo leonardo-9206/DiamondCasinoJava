@@ -1,0 +1,9 @@
+=== CORTE DE CAJA ===
+Fecha de Operación: 01/04/2026
+------------------------------------------------------------------
+Venta ID: V-1780622263200 | Cliente: Tuca Ferreti    | Total: $760.00
+Venta ID: V-1780622554868 | Cliente: Tuca Ferreti    | Total: $2500.00
+Venta ID: V-1780622313993 | Cliente: Leonardo        | Total: $1300.00
+------------------------------------------------------------------
+Ventas Totales Realizadas: 3
+INGRESOS TOTALES DEL DÍA: $4560.0

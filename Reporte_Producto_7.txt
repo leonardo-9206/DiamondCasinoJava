@@ -1,0 +1,19 @@
+=========================================
+    REPORTE DE VENTAS POR PRODUCTO       
+    Producto ID: 7
+=========================================
+
+Fecha: 01/04/2026 | Cliente: Tuca Ferreti
+  Cantidad: 1 | Subtotal: $1500.0
+
+Fecha: 02/04/2026 | Cliente: Tuca Ferreti
+  Cantidad: 3 | Subtotal: $4500.0
+
+Fecha: 02/04/2026 | Cliente: Leonardo
+  Cantidad: 1 | Subtotal: $1500.0
+
+=========================================
+Apariciones en ventas: 3
+Unidades vendidas en total: 5
+INGRESOS TOTALES DEL PRODUCTO: $7500.0
+=========================================

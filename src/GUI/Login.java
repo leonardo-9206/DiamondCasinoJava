@@ -52,6 +52,7 @@ public class Login extends JFrame {
 	 */
 	public Login() {
 		//aqui ahorita inicializo el usuariomanager
+		usuarioManager = new UsuarioManager();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 487, 479);
 		setTitle("Diamond Casino - Iniciar Sesión");

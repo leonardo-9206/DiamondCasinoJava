@@ -1,0 +1,24 @@
+=========================================
+    REPORTE DE VENTAS POR FECHA          
+    Fecha: 01/04/2026
+=========================================
+
+Cliente: Tuca Ferreti (ID: 1)
+  - Cerveza x20 ($600.0)
+  - Cigarros x2 ($160.0)
+  TOTAL VENTA: $760.0
+
+Cliente: Tuca Ferreti (ID: 1)
+  - Botella tequila x1 ($1500.0)
+  - Hamburguesa x10 ($1000.0)
+  TOTAL VENTA: $2500.0
+
+Cliente: Leonardo (ID: 2)
+  - Fichas Bronce x30 ($300.0)
+  - Fichas Oro x10 ($1000.0)
+  TOTAL VENTA: $1300.0
+
+=========================================
+Ventas encontradas: 3
+TOTAL RECAUDADO EN FECHA: $4560.0
+=========================================

@@ -255,7 +255,7 @@ public class MainFrame extends JFrame {
 			}
 		});
 		
-		//CERRAR SESION
+		//CERRAR SESION 
 		btnCerrarSesion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose(); //cierra el menu

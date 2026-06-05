@@ -1,0 +1,2 @@
+1,admin,1234,Admin
+2,Leonardo,2,Cliente

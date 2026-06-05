@@ -1,0 +1,15 @@
+=== ESTADO DE CUENTA ===
+Cliente: Tuca Ferreti
+ID Cuenta: 1
+------------------------
+Fecha: 01/04/2026 | Ticket: V-1780622263200 | Monto: $760.0
+  - Cerveza x20 ($600.0)
+  - Cigarros x2 ($160.0)
+Fecha: 01/04/2026 | Ticket: V-1780622554868 | Monto: $2500.0
+  - Botella tequila x1 ($1500.0)
+  - Hamburguesa x10 ($1000.0)
+Fecha: 02/04/2026 | Ticket: V-1780622794008 | Monto: $4600.0
+  - Botella tequila x3 ($4500.0)
+  - Hamburguesa x1 ($100.0)
+------------------------
+TOTAL GASTADO: $7860.0
